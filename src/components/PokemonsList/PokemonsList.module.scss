@@ -1,0 +1,10 @@
+@import '../../variables.module.scss';
+.PokemonsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -1.5em;
+  .loader-container{
+    margin-top: 3em;
+  }
+}
