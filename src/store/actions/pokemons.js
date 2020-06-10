@@ -22,13 +22,13 @@ export function getingEnds() {
 export function getingSuccess(pokemons) {
   return {
     type: GETED_SUCCESS,
-    paiload: pokemons,
+    payload: pokemons,
   };
 }
 export function getingError(error) {
   return {
     type: GETED_ERROR,
-    paiload: error,
+    payload: error,
     error: true,
   };
 }

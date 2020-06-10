@@ -1,7 +1,7 @@
 @import './variables.module.scss';
 
 :root {
-  font-size: calc(0.5em + 1vw);
+  font-size: calc(0.5em + .7vw);
   background-color: $bgc;
   color: $text;
 }
@@ -16,6 +16,11 @@
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text
 }
 
 @import url("https://fonts.googleapis.com/css?family=Neucha:regular");

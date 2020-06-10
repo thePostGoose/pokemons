@@ -26,12 +26,12 @@ export function pokemonsReducer(state = initialState, action) {
       return {
         ...state,
         error: null,
-        pokemonsNames: action.paiload,
+        pokemonsNames: action.payload,
       };
     case GETED_ERROR:
       return {
         ...state,
-        error: action.paiload,
+        error: action.payload,
       };
     case GETING_ENDS:
       return {

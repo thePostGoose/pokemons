@@ -1,6 +1,8 @@
 @import '../../variables.module.scss';
 
 .PokemonCard {
+  text-decoration: none;
+  color: $text;
   border: 2px solid $border;
   width: 10em;
   height: 15em;
@@ -13,11 +15,13 @@
     display: flex;
     justify-content: center;
     margin: 1em;
+
     img {
       display: block;
       flex-grow: 1;
     }
   }
+
   h3 {
     text-align: center;
   }

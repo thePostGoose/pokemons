@@ -1,0 +1,59 @@
+@import '../../../variables.module.scss';
+
+.Button {
+  width: 30%;
+  align-self: center;
+  outline: none;
+  border-radius: .8em;
+  padding: 1em 2em;
+  margin: 0.5em;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border: 1px solid $text;
+  color: $text;
+  background: $bgc;
+  font: inherit;
+
+  &:hover {
+    box-shadow: 0 0 .5em .1em lighten($border, 10%);
+  }
+
+
+  &:disabled {
+    background: lighten($bgc, 1%);
+    color: lighten($text, 30%);
+    cursor: not-allowed;
+    border-color: lighten($text, 30%);
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 0 0 0 #fff;
+    }
+  }
+
+  &.textBtn {
+    border: none;
+    color: $text;
+    align-self: flex-end;
+
+    &:hover {
+      box-shadow: 0 0 0 0 #000;
+      text-decoration: underline;
+    }
+
+    &:disabled {
+      background: lighten($bgc, 1%);
+      color: lighten($text, 10%);
+      cursor: not-allowed;
+      position: relative;
+
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 0 0 0 #fff;
+      }
+    }
+  }
+
+}

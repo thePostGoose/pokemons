@@ -1,0 +1,63 @@
+@import '../../variables.module.scss';
+
+.loader-container{
+  width: 100%;
+  height:  100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Info {
+  
+  display: flex;
+  justify-content: space-between;
+
+  .img-container {
+
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    img {
+      display: block;
+      flex-grow: 1;
+    }
+  }
+
+  .stats-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .type-constainer {
+      display: flex;
+      margin: 1em 0;
+      
+      span {
+        flex-grow: 1;
+        text-align: right;
+      }
+    }
+    
+    .dl-constainer {
+      text-align: center;
+      margin: 1em 0;
+      
+      
+      .dl-item {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .dots {
+          flex-grow: 1;
+          border-bottom: 2px dotted $text;
+          position: relative;
+          top: -.3em;
+          margin: 0 .2em;
+        }
+      }
+    }
+  }
+}
