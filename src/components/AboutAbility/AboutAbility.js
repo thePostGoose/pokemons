@@ -13,11 +13,10 @@ const AboutAbility = ({ abilityName, effect, pokemonsList, loading }) => {
       );
     });
   }
-  console.log("loading", loading);
   return (
     <div>
       {loading ? (
-        <div className={classes['loader-container']}>
+        <div className={classes["loader-container"]}>
           <Loader />
         </div>
       ) : (
