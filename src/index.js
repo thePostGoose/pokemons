@@ -10,6 +10,8 @@ import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
 import rootReducer from "./store/reducers/rootReducer";
 
+const __DEV__ = process.env.NODE_ENV === "development";
+
 const logger = createLogger({
   duration: true,
   collapsed: true,
@@ -28,10 +30,9 @@ const composeEnhancers =
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose;
 
-const store = createStore(
-  rootReducer,
-  composeEnhancers(applyMiddleware(logger, thunk))
-);
+const store = __DEV__
+  ? createStore(rootReducer, composeEnhancers(applyMiddleware(logger, thunk)))
+  : createStore(rootReducer, applyMiddleware(thunk));
 
 const app = (
   <React.StrictMode>
